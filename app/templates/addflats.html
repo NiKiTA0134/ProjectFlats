@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flats in Ukraine</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../static/style.css">
+	<script src="app.js" type="module"></script>
+</head>
+<body>
+	<header>
+		<h1>Add flat</h1>
+		<nav>
+			<ul>
+				<li><a href="/main">Home</a></li>
+                <li><a href="/showflats">Show flats</a></li>
+				<li><a href="/login">Log in</a></li>
+				<li><a href="/bot">Bot</a></li>
+				<li><a href="/apipage">Strange page</a></li>
+				<li><a href="/message">Messanger</a></li>
+				<li><a href="/answer">Answer</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+            <div>
+                <h1>
+				<form action="addflats" method="post">
+
+					<label for="name">Name</label><br>
+                	<input type="name" id="name" name="name" placeholder="Create name of your offer"><br>
+
+                	<label for="street">Street</label><br>
+                	<input type="text" id="street" name="street" placeholder="Street"><br>
+
+                	<label for="floor">Floor</label><br>
+                	<input type="text" id="floor" name="floor" placeholder="Floor in the house"><br>
+
+                	<label for="room">Rooms</label><br>
+                	<input type="text" id="room" name="room" placeholder="Number of rooms"><br>
+
+					<label for="size">Size</label><br>
+                	<input type="text" id="size" name="size" placeholder="Size in m²"><br>
+
+					<label for="near">Near</label><br>
+                	<input type="text" id="near" name="near" placeholder="For example underground/school"><br>
+
+					<label for="price">Price</label><br>
+                	<input type="text" id="price" name="price" placeholder="Price in $"><br>
+
+					<label for="currency">Currency</label><br>
+					<select id="currency" name="currency">
+					  <option value="$">Dollar - $</option>
+					</select>
+					<br>
+					<center>
+					<div id="googleMap" style="width:50%;height:400px;"></div><br>
+
+						<script>
+							function myMap() {
+							var mapProp= {
+  								center:new google.maps.LatLng(51.508742,-0.120850),
+  								zoom:5,
+							};
+							var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+							}
+							google.maps.event.addListener(map, 'click', function(event) {
+							  placeMarker(map, event.latLng);
+							});
+
+						</script>
+
+						<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsDy3cDo79zLSHjH7YnCKcj7d0WpnHcIM&callback=myMap"></script>
+
+						<script>
+							function placeMarker(map, location) {
+							  var marker = new google.maps.Marker({
+								position: location,
+								map: map
+							  });
+							var infowindow = new google.maps.InfoWindow({
+								content: 'Latitude: ' + location.lat() +
+								'<br>Longitude: ' + location.lng()
+							  });
+							  infowindow.open(map,marker);
+							}
+						</script>
+					</center><br>
+
+					<label for="position">Position</label><br>
+                	<input type="text" id="position" name="position" placeholder="Coordinates of your flat in google maps"><br>
+
+                	<input type="submit" value="Add flat for sale"><br>
+					<br>
+            	</form>
+                </h1>
+				<h1>----------------------------------------</h1>
+				<h1>Instruction for found your coordinates</h1><br>
+				<h1>Step 1</h1>
+				<h1> You need to found place what you want to place for sale on our Google map then press some near marker and press button "View on Google Maps"</h1>
+				<img src="static/image/im1.jpg">
+				<h1>Press</h1>
+				<img src="static/image/im2.jpg">
+				<h1>----------------------------------------</h1>
+				<h1>Step 2</h1>
+				<h1>Press view on Google maps</h1>
+				<img src="static/image/im3.jpg">
+				<h1>Use satellite mood for simpler use then found your house and press right click</h1>
+				<img src="static/image/im4.jpg">
+				<h1>----------------------------------------</h1>
+				<h1>Step 3</h1>
+				<h1>Press coordinates it will copy automatically</h1>
+				<img src="static/image/im5.jpg">
+				<h1>Put copied coordinates in the form</h1>
+            </div>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 My Website</p>
+	</footer>
+</body>
+</html>

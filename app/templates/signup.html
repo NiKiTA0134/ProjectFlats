@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign up</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../static/style.css">
+	<script src="app.js" type="module"></script>
+</head>
+<body>
+	<header>
+		<h1>Sign up</h1>
+		<nav>
+			<ul>
+				<li><a href="/main">Home</a></li>
+				<li><a href="/login">Log in</a></li>
+				<li><a href="/bot">Bot</a></li>
+				<li><a href="/apipage">Strange page</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<h1>Hi, this page for create your account, if you already have it you can only login</h1>
+			<nav><h2><a href="/login">Login</a></h2></nav><br>
+			<form action="signup" method="post">
+  				<label for="nickname">Nickname</label><br>
+  				<input type="text" id="nickname" name="nickname" placeholder="Create you nickname" autofocus=""><br>
+
+  				<label for="password">Password</label><br>
+  				<input type="text" id="password" name="password" placeholder="Create your password"><br>
+
+  				<label for="email">Email</label><br>
+				<input type="text" id="email" name="email" placeholder="Write your email"><br>
+
+				<label for="currency">Currency</label><br>
+				<select id="currency" name="currency">
+				  <option value="₴">Hryvnia - ₴</option>
+				  <option value="$">Dollar - $</option>
+				  <option value="€">Euro - €</option>
+				</select>
+
+  				<input type="submit" value="Sign up">
+			</form>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 My Website</p>
+	</footer>
+</body>
+</html>

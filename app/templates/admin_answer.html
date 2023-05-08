@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flats in Ukraine</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../static/style.css">
+	<script src="app.js" type="module"></script>
+</head>
+<body>
+	<header>
+		<h1>Messanger</h1>
+		<nav>
+			<ul>
+				<li><a href="/main">Home</a></li>
+				<li><a href="/showflats">Show flats</a></li>
+				<li><a href="/addflats">Add flat</a></li>
+				<li><a href="/login">Log in</a></li>
+				<li><a href="/bot">Bot</a></li>
+				<li><a href="/apipage">Strange page</a></li>
+                <li><a href="/message">Messanger</a></li>
+				<li><a href="/answer">Answer</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+            <div>
+				<h1>Admin answer page</h1>
+				{% for answers in answers %}
+					<h1>{{ answers.nickname }}({{ answers.id }})- {{ answers.message }}</h1>
+					<form action="admin_answer" method="post">
+
+						<label for="id">Id</label><br>
+						<input type="text" id="id" name="id" autofocus=""><br>
+
+						<label for="answer">Answer</label><br>
+						<input type="text" id="answer" name="answer" autofocus="">
+
+						<input type="submit" value="Add answer">
+					</form>
+					<h1>-----------------</h1>
+				{% endfor %}
+            </div>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 My Website</p>
+	</footer>
+</body>
+</html>

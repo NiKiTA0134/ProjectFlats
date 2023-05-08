@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flats in Ukraine</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../static/style.css">
+	<script src="app.js" type="module"></script>
+</head>
+<body>
+	<header>
+		<h1>Pay</h1>
+		<nav>
+			<ul>
+				<li><a href="/main">Home</a></li>
+                <li><a href="/showflats">Show flats</a></li>
+                <li><a href="/addflats">Add flat</a></li>
+				<li><a href="/login">Log in</a></li>
+				<li><a href="/signup">Sign up</a></li>
+				<li><a href="/bot">Bot</a></li>
+				<li><a href="/apipage">Strange page</a></li>
+				<li><a href="/message">Messanger</a></li>
+				<li><a href="/answer">Answer</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+            <div>
+				<form action="pay" method="post">
+
+					<label for="card">Credit card</label><br>
+					<input type="text" id="card" name="card" placeholder="Write your credit card"><br>
+
+					<label for="password">Pin-cod</label><br>
+					<input type="text" id="password" name="password" placeholder="Your pin-cod"><br>
+
+					<label for="name">Name and surname</label><br>
+                	<input type="text" id="name" name="name" placeholder="Your name and surname"><br>
+					<center>
+						<nav>
+							<ul>
+								<li><h1><a href="/not_now">Buy</a></h1></li>
+							</ul>
+						</nav>
+					</center>
+            </form>
+            </div>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 My Website</p>
+	</footer>
+</body>
+</html>

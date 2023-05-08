@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flats in Ukraine</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../static/style.css">
+	<script src="app.js" type="module"></script>
+</head>
+<body>
+	<header>
+		<h1>Messanger</h1>
+		<nav>
+			<ul>
+				<li><a href="/main">Home</a></li>
+				<li><a href="/showflats">Show flats</a></li>
+				<li><a href="/addflats">Add flat</a></li>
+				<li><a href="/login">Log in</a></li>
+				<li><a href="/bot">Bot</a></li>
+				<li><a href="/apipage">Strange page</a></li>
+                <li><a href="/message">Messanger</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+            <div>
+				<h1>Answer</h1>
+				{% for message in message %}
+				<h1>{{ message.nickname }} - {{ message.message }}</h1>
+				<h1>Answer - {{ message.answer }}</h1>
+				<h1>-----------------</h1>
+				{% endfor %}
+            </div>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 My Website</p>
+	</footer>
+</body>
+</html>
